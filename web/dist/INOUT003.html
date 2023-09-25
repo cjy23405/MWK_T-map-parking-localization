@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-in-out-info">입출차 부가정보</a>
+
+    <!-- layer: 입출차 부가정보 -->
+    <div class="layer-wrap layer-in-out-info" data-layer="layer-in-out-info">
+      <div class="layer-container">
+        <section class="ui-layer">
+          <div class="ui-layer__head">
+            <h2 class="page-title">
+              <span class="page-title__text">입출차 부가정보</span>
+            </h2>
+          </div>
+          <div class="ui-layer__body ui-scroller">
+            <div class="ui-layer__body-inner">
+              <div class="view-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>차량번호</th>
+                      <td>11가 1213</td>
+                    </tr>
+                    <tr>
+                      <th>고객 유형</th>
+                      <td>회원</td>
+                    </tr>
+                    <!-- 2021.05.04 : add : 항목 추가 -->
+                    <tr>
+                      <th>자동결제 여부</th>
+                      <td>활성화</td>
+                    </tr>
+                    <!-- //2021.05.04 : add : 항목 추가 -->
+                    <tr>
+                      <th>정기권</th>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th>입차 시간</th>
+                      <td>2021.03.01 13:00</td>
+                    </tr>
+                    <tr>
+                      <th>출차 시간</th>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Case : 이미지 있을 때 -->
+              <div class="car-photo car-photo--detail">
+                <div class="car-photo__inner">
+                  <img src="./assets/images/_dummy/thumb-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+                </div>
+              </div>
+              <!-- //Case : 이미지 있을 때 -->
+
+              <!-- Case : 이미지 없을 때
+              <div class="car-photo car-photo--detail">
+                <div class="car-photo__inner"></div>
+              </div>
+              -->
+
+              <!-- Case : 이미지 에러
+              <div class="car-photo car-photo--detail">
+                <div class="car-photo__inner">
+                  <img src="http:undefined" alt="" onerror="this.parentNode.className += ' is-error';" />
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+          <div class="ui-layer__foot">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button" data-role="layerClose">확인</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 입출차 부가정보 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-in-out-info');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>컴포넌트 가이드</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./dist/assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./dist/assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./dist/assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./dist/assets/css/ui-style.css" />
+    <style>
+      *:focus {
+        outline: 1px dotted #999;
+      }
+      b {
+        margin-left: 10px;
+      }
+      body {
+        background: #f3f3f3;
+      }
+      h1.test-title {
+        font-size: 30px;
+        margin: 50px 50px;
+      }
+      h2.test-title {
+        margin: 0 0 20px;
+        font-size: 22px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #888;
+      }
+      h3.test-title {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+      .test-section {
+        border-top: 2px solid #ddd;
+        padding: 50px;
+      }
+      .test-section-sub + .test-section-sub {
+        margin-top: 20px;
+        border-top: 1px dashed #ddd;
+        padding-top: 20px;
+      }
+      .test-code {
+        border: 2px solid #ddd;
+        margin: 10px 0;
+        background: #fff;
+        padding: 10px;
+      }
+      .test-code:before {
+        content: 'ex.';
+        display: block;
+        font-size: 12px;
+      }
+      .test-description {
+        margin: 10px 0;
+        padding: 0 12px;
+      }
+      .test-links {
+        margin-left: -20px;
+      }
+      .test-links:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .test-links a {
+        display: block;
+        margin: 20px 0 0 20px;
+        float: left;
+        padding: 5px 15px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        background: #333;
+      }
+      .test-links + h2.test-title {
+        margin-top: 20px;
+      }
+    </style>
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div style="display: table"></div>
+
+      <h1 class="test-title">Component</h1>
+
+      <div class="test-section test-section--button">
+        <style>
+          .test-section--button .ui-basic-button {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            width: auto;
+          }
+        </style>
+        <h2 class="test-title">Basic Button</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">button tag</h3>
+          <button type="button" class="ui-button ui-basic-button">button</button>
+          <button type="button" class="ui-button ui-basic-button" disabled>button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--secondary">button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--secondary" disabled>button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--tertiary">button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--tertiary" disabled>button</button>
+          <!--
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary" disabled>button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary">button</button>
+          <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary" disabled>button</button>
+          -->
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">a tag</h3>
+          <a href="" class="ui-basic-button">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--disabled">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--secondary">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--secondary ui-basic-button--disabled">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--tertiary">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--tertiary ui-basic-button--disabled">button</a>
+          <!--
+          <a href="" class="ui-basic-button ui-basic-button--quaternary">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--quaternary ui-basic-button--disabled">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--quinary">button</a>
+          <a href="" class="ui-basic-button ui-basic-button--quinary ui-basic-button--disabled">button</a>
+          -->
+        </div>
+      </div>
+
+      <div class="test-section test-section--button">
+        <style>
+          .test-section--button .ui-table-button {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            width: auto;
+          }
+        </style>
+        <h2 class="test-title">Table Button</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">button tag</h3>
+          <button type="button" class="ui-button ui-table-button">button</button>
+          <button type="button" class="ui-button ui-table-button" disabled>button</button>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">a tag</h3>
+          <a href="" class="ui-table-button">button</a>
+          <a href="" class="ui-table-button ui-table-button--disabled">button</a>
+        </div>
+      </div>
+
+      <div class="test-section test-section--button-list">
+        <h2 class="test-title">Button List</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-buttons">
+            <ul class="ui-buttons__list">
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button ui-basic-button--tertiary">button</a>
+              </li>
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button">button</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">Align Left</h3>
+          <div class="ui-buttons ui-buttons--left">
+            <ul class="ui-buttons__list">
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button ui-basic-button--tertiary">button</a>
+              </li>
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button">button</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">Align Right</h3>
+          <div class="ui-buttons ui-buttons--right">
+            <ul class="ui-buttons__list">
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button ui-basic-button--tertiary">button</a>
+              </li>
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button">button</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">Align Center</h3>
+          <div class="ui-buttons ui-buttons--center">
+            <ul class="ui-buttons__list">
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button ui-basic-button--tertiary">button</a>
+              </li>
+              <li class="ui-buttons__item">
+                <a href="" class="ui-basic-button">button</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--input">
+        <style>
+          .test-section--input .ui-input-block + .ui-input-block {
+            margin-top: 10px;
+          }
+        </style>
+        <h2 class="test-title">Input</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+          </div>
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="readonly placeholder" readonly />
+          </div>
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="readonly placeholder" value="readonly value" readonly />
+          </div>
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="disabled placeholder" disabled />
+          </div>
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="disabled placeholder" value="disabled value" disabled />
+          </div>
+          <div class="ui-input-block ui-input-block--disabled">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" value="입력은 되지만 스타일만 disabled" />
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--date">
+        <style>
+          .test-section--date .ui-input-block + .ui-input-block,
+          .test-section--date .range-date-form + .range-date-form {
+            margin-top: 10px;
+          }
+        </style>
+        <h2 class="test-title">Date Input</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-input-block ui-input-block--date">
+            <input type="text" class="ui-input js-datepicker" title="title" value="2021-03-31" />
+          </div>
+          <div class="ui-input-block ui-input-block--date">
+            <input type="text" class="ui-input js-datepicker" title="title" value="2021-03-31" readonly />
+          </div>
+          <div class="ui-input-block ui-input-block--date">
+            <input type="text" class="ui-input js-datepicker" title="title" value="2021-03-31" disabled />
+          </div>
+          <div class="ui-input-block ui-input-block--date ui-input-block--disabled">
+            <input type="text" class="ui-input js-datepicker" title="title" value="2021-03-31" />
+          </div>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">Range</h3>
+          <div class="form-flex range-date-form js-datepicker-range">
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date">
+                <input type="text" class="ui-input js-datepicker-range__min" title="조회 기간 시작 날짜" value="2021-03-31" />
+              </div>
+            </div>
+            <div class="form-flex__cell">-</div>
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date">
+                <input type="text" class="ui-input js-datepicker-range__max" title="조회 기간 끝 날짜" value="2021-03-31" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-flex range-date-form js-datepicker-range">
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date">
+                <input type="text" class="ui-input js-datepicker-range__min" title="조회 기간 시작 날짜" value="2021-03-31" readonly />
+              </div>
+            </div>
+            <div class="form-flex__cell">-</div>
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date">
+                <input type="text" class="ui-input js-datepicker-range__max" title="조회 기간 끝 날짜" value="2021-03-31" readonly />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-flex range-date-form js-datepicker-range">
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date">
+                <input type="text" class="ui-input js-datepicker-range__min" title="조회 기간 시작 날짜" value="2021-03-31" disabled />
+              </div>
+            </div>
+            <div class="form-flex__cell">-</div>
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date">
+                <input type="text" class="ui-input js-datepicker-range__max" title="조회 기간 끝 날짜" value="2021-03-31" disabled />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-flex range-date-form js-datepicker-range">
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date ui-input-block--disabled">
+                <input type="text" class="ui-input js-datepicker-range__min" title="조회 기간 시작 날짜" value="2021-03-31" />
+              </div>
+            </div>
+            <div class="form-flex__cell">-</div>
+            <div class="form-flex__cell">
+              <div class="ui-input-block ui-input-block--date ui-input-block--disabled">
+                <input type="text" class="ui-input js-datepicker-range__max" title="조회 기간 끝 날짜" value="2021-03-31" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--textarea">
+        <style>
+          .test-section--textarea .ui-input-block + .ui-input-block {
+            margin-top: 10px;
+          }
+        </style>
+        <h2 class="test-title">Textarea</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-input-block">
+            <textarea class="ui-input" title="title" placeholder="placeholder"></textarea>
+          </div>
+          <div class="ui-input-block">
+            <textarea class="ui-input" title="title" placeholder="readonly placeholder" readonly></textarea>
+          </div>
+          <div class="ui-input-block">
+            <textarea class="ui-input" title="title" placeholder="readonly placeholder" readonly>readonly value</textarea>
+          </div>
+          <div class="ui-input-block">
+            <textarea class="ui-input" title="title" placeholder="disabled placeholder" disabled></textarea>
+          </div>
+          <div class="ui-input-block">
+            <textarea class="ui-input" title="title" placeholder="disabled placeholder" disabled>disabled value</textarea>
+          </div>
+          <div class="ui-input-block ui-input-block--disabled">
+            <textarea class="ui-input" title="title" placeholder="placeholder">입력은 되지만 스타일만 disabled</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--select">
+        <style>
+          .test-section--select .ui-select-block + .ui-select-block {
+            margin-top: 10px;
+          }
+        </style>
+        <h2 class="test-title">Select</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-select-block">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>placeholder</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+          <div class="ui-select-block">
+            <select class="ui-select" title="title" disabled>
+              <option value="-1" disabled>disabled placeholder</option>
+              <option value="" selected>disabled option 1</option>
+              <option value="">disabled option 2</option>
+              <option value="">disabled option 3</option>
+              <option value="">disabled option 4</option>
+              <option value="">disabled option 5</option>
+            </select>
+          </div>
+          <div class="ui-select-block ui-select-block--disabled">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>입력은 되지만 스타일만 disabled</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--checkbox">
+        <style>
+          .test-section--checkbox .ui-checkbox-block {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+          }
+        </style>
+        <h2 class="test-title">Checkbox</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkbox1" />
+            <label for="checkbox1" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkbox2" checked />
+            <label for="checkbox2" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkbox3" disabled />
+            <label for="checkbox3" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkbox4" checked disabled />
+            <label for="checkbox4" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default - align top</h3>
+          <div class="ui-checkbox-block ui-checkbox-block--align-top">
+            <input type="checkbox" class="ui-checkbox" id="checkbox17" />
+            <label for="checkbox17" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-checkbox-block ui-checkbox-block--align-top">
+            <input type="checkbox" class="ui-checkbox" id="checkbox18" checked />
+            <label for="checkbox18" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-checkbox-block ui-checkbox-block--align-top">
+            <input type="checkbox" class="ui-checkbox" id="checkbox19" disabled />
+            <label for="checkbox19" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-checkbox-block ui-checkbox-block--align-top">
+            <input type="checkbox" class="ui-checkbox" id="checkbox20" checked disabled />
+            <label for="checkbox20" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--radio">
+        <style>
+          .test-section--radio .ui-radio-block {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+          }
+        </style>
+        <h2 class="test-title">Radio</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="ui-radio-block">
+            <input type="radio" class="ui-radio" id="radio1" />
+            <label for="radio1" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-radio-block">
+            <input type="radio" class="ui-radio" id="radio2" checked />
+            <label for="radio2" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-radio-block">
+            <input type="radio" class="ui-radio" id="radio3" disabled />
+            <label for="radio3" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-radio-block">
+            <input type="radio" class="ui-radio" id="radio4" checked disabled />
+            <label for="radio4" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default - align top</h3>
+          <div class="ui-radio-block ui-radio-block--align-top">
+            <input type="radio" class="ui-radio" id="radio5" />
+            <label for="radio5" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-radio-block ui-radio-block--align-top">
+            <input type="radio" class="ui-radio" id="radio6" checked />
+            <label for="radio6" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-radio-block ui-radio-block--align-top">
+            <input type="radio" class="ui-radio" id="radio7" disabled />
+            <label for="radio7" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+          <div class="ui-radio-block ui-radio-block--align-top">
+            <input type="radio" class="ui-radio" id="radio8" checked disabled />
+            <label for="radio8" class="ui-label">
+              <span class="ui-radio-object"></span>
+              <span class="ui-label__text">label<br />2 line label</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--check-list">
+        <h2 class="test-title">Check List</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">Default</h3>
+          <div class="check-list">
+            <ul class="check-list__list">
+              <li class="check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filterAll" />
+                  <label for="filterAll" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">전체</span>
+                  </label>
+                </div>
+              </li>
+              <li class="check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter1" />
+                  <label for="filter1" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">정상</span>
+                  </label>
+                </div>
+              </li>
+              <li class="check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2" />
+                  <label for="filter2" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">미인식</span>
+                  </label>
+                </div>
+              </li>
+              <li class="check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3" />
+                  <label for="filter3" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">오인식</span>
+                  </label>
+                </div>
+              </li>
+              <li class="check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter4" />
+                  <label for="filter4" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">CS수정</span>
+                  </label>
+                </div>
+              </li>
+              <li class="check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter5" />
+                  <label for="filter5" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">장기주차</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-section test-section--pagenation">
+        <h2 class="test-title">Pagenation</h2>
+        <div class="test-section-sub">
+          <h3 class="test-title">첫 페이지 일 때</h3>
+          <nav class="pagenation">
+            <h4 class="for-a11y">Pagenation</h4>
+            <div class="pagenation__inner">
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start" disabled><span class="for-a11y">처음</span></button>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev" disabled><span class="for-a11y">이전</span></button>
+              <a href="" class="pagenation__link is-active">1</a>
+              <a href="" class="pagenation__link">2</a>
+              <a href="" class="pagenation__link">3</a>
+              <a href="" class="pagenation__link">4</a>
+              <a href="" class="pagenation__link">5</a>
+              <a href="" class="pagenation__link">6</a>
+              <a href="" class="pagenation__link">7</a>
+              <a href="" class="pagenation__link">8</a>
+              <a href="" class="pagenation__link">9</a>
+              <a href="" class="pagenation__link">10</a>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next"><span class="for-a11y">다음</span></button>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end"><span class="for-a11y">끝</span></button>
+            </div>
+          </nav>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">첫 페이지도, 마지막 페이지도 아닐 때</h3>
+          <nav class="pagenation">
+            <h3 class="for-a11y">Pagenation</h3>
+            <div class="pagenation__inner">
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start"><span class="for-a11y">처음</span></button>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev"><span class="for-a11y">이전</span></button>
+              <a href="" class="pagenation__link">1</a>
+              <a href="" class="pagenation__link">2</a>
+              <a href="" class="pagenation__link">3</a>
+              <a href="" class="pagenation__link">4</a>
+              <a href="" class="pagenation__link">5</a>
+              <a href="" class="pagenation__link is-active">6</a>
+              <a href="" class="pagenation__link">7</a>
+              <a href="" class="pagenation__link">8</a>
+              <a href="" class="pagenation__link">9</a>
+              <a href="" class="pagenation__link">10</a>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next"><span class="for-a11y">다음</span></button>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end"><span class="for-a11y">끝</span></button>
+            </div>
+          </nav>
+        </div>
+        <div class="test-section-sub">
+          <h3 class="test-title">마지막 페이지 일 때</h3>
+          <nav class="pagenation">
+            <h3 class="for-a11y">Pagenation</h3>
+            <div class="pagenation__inner">
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start"><span class="for-a11y">처음</span></button>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev"><span class="for-a11y">이전</span></button>
+              <a href="" class="pagenation__link">1</a>
+              <a href="" class="pagenation__link">2</a>
+              <a href="" class="pagenation__link">3</a>
+              <a href="" class="pagenation__link">4</a>
+              <a href="" class="pagenation__link">5</a>
+              <a href="" class="pagenation__link">6</a>
+              <a href="" class="pagenation__link">7</a>
+              <a href="" class="pagenation__link">8</a>
+              <a href="" class="pagenation__link">9</a>
+              <a href="" class="pagenation__link is-active">10</a>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next" disabled><span class="for-a11y">다음</span></button>
+              <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end" disabled><span class="for-a11y">끝</span></button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./dist/assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./dist/assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./dist/assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./dist/assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./dist/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./dist/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./dist/assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

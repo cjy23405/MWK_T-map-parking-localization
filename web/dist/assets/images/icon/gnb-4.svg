@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-3{stroke:#fff;stroke-linecap:round;stroke-width:1.5px}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_차량정산내역_n" transform="translate(-1326 -5943)">
+        <rect id="사각형_4" width="34" height="34" class="cls-1" rx="5" transform="translate(1326 5943)"/>
+        <g id="합치기_3" fill="none">
+            <path d="M7161 9406a2 2 0 0 1-2-2v-21a2 2 0 0 1 2-2h1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2h1a2 2 0 0 1 2 2v21a2 2 0 0 1-2 2z" class="cls-6" transform="translate(-5826 -3433)"/>
+            <path fill="#fff" d="M7177.001 9404.501c.275 0 .5-.225.5-.5v-21.002c0-.275-.225-.5-.5-.5h-2.5v-1.5c0-.275-.225-.499-.5-.499h-10.002c-.275 0-.5.224-.5.499v1.5h-2.498c-.276 0-.501.225-.501.5v21.002c0 .275.225.5.501.5h16m0 1.5h-16c-1.105 0-2.001-.897-2.001-2v-21.002c0-1.103.896-2 2.001-2h.999c0-1.104.896-1.999 1.999-1.999h10.002c1.104 0 2 .895 2 1.999h1c1.103 0 2 .897 2 2v21.002c0 1.103-.897 2-2 2z" transform="translate(-5826 -3433)"/>
+        </g>
+        <g id="그룹_96" transform="translate(1289.5 5748.736)">
+            <path id="선_6" d="M0 0L10 0" class="cls-3" transform="translate(48.5 215.264)"/>
+        </g>
+        <g id="그룹_106" transform="translate(1289.5 5751.736)">
+            <path id="선_6-2" d="M0 0L10 0" class="cls-3" transform="translate(48.5 215.264)"/>
+        </g>
+        <text id="_" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.2px" font-family="NanumSquareOTFEB, NanumSquareOTF" font-size="9px" transform="translate(1338.5 5960.5)">
+            <tspan x="0" y="0">\</tspan>
+        </text>
+        <g id="사각형_732" fill="none" stroke="#fff" stroke-width="1.5px" transform="translate(1336 5946)">
+            <rect width="14" height="5" class="cls-6" rx="2"/>
+            <rect width="12.5" height="3.5" x=".75" y=".75" class="cls-1" rx="1.25"/>
+        </g>
+    </g>
+</svg>

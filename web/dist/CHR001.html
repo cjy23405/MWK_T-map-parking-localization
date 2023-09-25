@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="layout-wrap">
+        <div class="header-wrap ui-scroller">
+          <header class="header">
+            <div class="header__head">
+              <h1 class="header__logo">
+                <a href="" class="header__logo-link">
+                  <span class="for-a11y">T-map 주차</span>
+                </a>
+              </h1>
+            </div>
+            <div class="header__body">
+              <nav class="gnb">
+                <h2 class="for-a11y">글로벌 내비게이션</h2>
+                <ul class="gnb__list">
+                  <li class="gnb__item gnb__item--parking-lot-info">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">주차장 정보</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--in-and-out-log">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">입출차 정보</span>
+                    </a>
+                  </li>
+                  <!-- DD : 해당 페이지면 is-active 클래스 값 추가 -->
+                  <li class="gnb__item gnb__item--subscribe-log is-active">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">차량 상품 정보</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--calculate-log">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">차량 정산 내역</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--vip-info">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">VIP존 정보</span>
+                    </a>
+                  </li>
+                  <!-- 2021.05.04 : add : 메뉴 추가 -->
+                  <li class="gnb__item gnb__item--blacklist">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">블랙 리스트</span>
+                    </a>
+                  </li>
+                  <!-- //2021.05.04 : add : 메뉴 추가 -->
+                  <li class="gnb__item gnb__item--gateway-version">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">게이트웨이 버전</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__foot">
+              <div class="header__etc-nav">
+                <ul class="header__etc-nav__list">
+                  <li class="header__etc-nav__item">
+                    <a href="" class="header__etc-nav__link">비밀번호 변경</a>
+                  </li>
+                  <li class="header__etc-nav__item">
+                    <a href="" class="header__etc-nav__link">로그아웃</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="contents-wrap">
+          <section class="contents">
+            <div class="page-head">
+              <h2 class="page-head__title">
+                <span class="page-head__title-text">주차장 정보</span>
+                <span class="page-head__title-arrow">
+                  <span class="for-a11y">&gt;</span>
+                </span>
+                <strong class="page-head__title-text">과금 정책</strong>
+              </h2>
+            </div>
+
+            <div class="primary-tab">
+              <ul class="primary-tab__list">
+                <li class="primary-tab__item">
+                  <a href="" class="primary-tab__link">
+                    <span class="primary-tab__text">기본 정보</span>
+                  </a>
+                </li>
+                <li class="primary-tab__item is-active">
+                  <a href="" class="primary-tab__link">
+                    <span class="primary-tab__text">과금 정책</span>
+                  </a>
+                </li>
+                <li class="primary-tab__item">
+                  <a href="" class="primary-tab__link">
+                    <span class="primary-tab__text">상품 정보</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contents-head contents-head--info">
+              <h3 class="page-title">
+                <span class="page-title__text">TP00000180 센트로 폴리스</span>
+              </h3>
+              <div class="contents-head__right">
+                <div class="form-flex">
+                  <div class="form-flex__cell">
+                    <div class="ui-input-block">
+                      <div class="ui-input">수신일자: 2021-02-17 13:00</div>
+                    </div>
+                  </div>
+                  <div class="form-flex__cell">
+                    <a href="" class="ui-basic-button">이력</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-accordion js-ui-accordion">
+              <!-- Case : 일반 요금 -->
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">적용시점 : 2021-03-01 적용 종료: 9999-12-31 상태: 적용중</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <div class="view-table view-table--info-detail">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>입차 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>정산 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>입주사 확인 최대 무료시간</th>
+                            <td>미사용</td>
+                          </tr>
+                          <tr>
+                            <th>세금 과금 정책 안내</th>
+                            <td>Description Description Description Description Description</td>
+                          </tr>
+                          <tr>
+                            <th>지류 할인권 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>요금 정책 구분</th>
+                            <td>일반 요금</td>
+                          </tr>
+                          <tr>
+                            <th>1일 최대 주차 요금</th>
+                            <td>20,000원</td>
+                          </tr>
+                          <tr>
+                            <th>기본 요금 (입차 후 최초 요금)</th>
+                            <td>최초 30분 1,000원</td>
+                          </tr>
+                          <tr>
+                            <th>기본 요금 (입차 후 최초 요금)</th>
+                            <td>10분당 1,000원</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- //Case : 일반 요금 -->
+
+              <!-- Case : 세부 요금 -->
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">적용시점 : 2021-03-01 적용 종료: 9999-12-31 상태: 적용중</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <div class="view-table view-table--info-detail">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>입차 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>정산 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>입주사 확인 최대 무료시간</th>
+                            <td>미사용</td>
+                          </tr>
+                          <tr>
+                            <th>세금 과금 정책 안내</th>
+                            <td>Description Description Description Description Description</td>
+                          </tr>
+                          <tr>
+                            <th>지류 할인권 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>요금 정책 구분</th>
+                            <td>세부 요금</td>
+                          </tr>
+                          <tr>
+                            <th>1일 최대 주차 요금</th>
+                            <td>20,000원</td>
+                          </tr>
+                          <tr>
+                            <th>세부 기본 요금</th>
+                            <td>
+                              최초 30분<br />
+                              평일 : 1,000원<br />
+                              토요일: 3,000원<br />
+                              공휴일: 3,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>세부 추가 요금</th>
+                            <td>
+                              10분당<br />
+                              평일 00시~09시: 1,000원<br />
+                              평일 09시~00시: 1,200원<br />
+                              토요일 00시~09시: 1,000원<br />
+                              토요일 09시~00시: 1,200원<br />
+                              공휴일 00시~09시: 1,000원<br />
+                              공휴일 09시~00시: 1,200원
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- //Case : 세부 요금 -->
+
+              <!-- Case : 요일별 세부 요금 -->
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">적용시점 : 2021-03-01 적용 종료: 9999-12-31 상태: 적용중</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <div class="view-table view-table--info-detail">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>입차 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>정산 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>입주사 확인 최대 무료시간</th>
+                            <td>미사용</td>
+                          </tr>
+                          <tr>
+                            <th>세금 과금 정책 안내</th>
+                            <td>Description Description Description Description Description</td>
+                          </tr>
+                          <tr>
+                            <th>지류 할인권 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>요금 정책 구분</th>
+                            <td>요일별 세부 요금</td>
+                          </tr>
+                          <tr>
+                            <th>기본 요금 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>1일 최대 주차요금 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>월요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              00시~09시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원<br />
+                              09시~00시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>화요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              00시~09시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원<br />
+                              09시~00시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>수요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              00시~09시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원<br />
+                              09시~00시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>목요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              00시~09시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원<br />
+                              09시~00시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>금요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              00시~09시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원<br />
+                              09시~00시: 기본요금 최초 30분 1,000원, 추가요금: 10분당 1,000원
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- //Case : 요일별 세부 요금 -->
+
+              <!-- Case : 요일별 누진 요금 -->
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">적용시점 : 2021-03-01 적용 종료: 9999-12-31 상태: 적용중</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <div class="view-table view-table--info-detail">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>입차 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>정산 후 무료 시간</th>
+                            <td>30분</td>
+                          </tr>
+                          <tr>
+                            <th>입주사 확인 최대 무료시간</th>
+                            <td>미사용</td>
+                          </tr>
+                          <tr>
+                            <th>세금 과금 정책 안내</th>
+                            <td>Description Description Description Description Description</td>
+                          </tr>
+                          <tr>
+                            <th>지류 할인권 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>요금 정책 구분</th>
+                            <td>요일별 세부 요금</td>
+                          </tr>
+                          <tr>
+                            <th>기본 요금 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>1일 최대 주차요금 사용여부</th>
+                            <td>사용</td>
+                          </tr>
+                          <tr>
+                            <th>월요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              기본요금: 최초 30분 1,000원<br />
+                              추가요금: 00분 초과 ~30분 이하 10분당 1,000원, 30분 초과 ~ 60분 이하 10분당 2,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>화요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              기본요금: 최초 30분 1,000원<br />
+                              추가요금: 00분 초과 ~30분 이하 10분당 1,000원, 30분 초과 ~ 60분 이하 10분당 2,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>수요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              기본요금: 최초 30분 1,000원<br />
+                              추가요금: 00분 초과 ~30분 이하 10분당 1,000원, 30분 초과 ~ 60분 이하 10분당 2,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>목요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              기본요금: 최초 30분 1,000원<br />
+                              추가요금: 00분 초과 ~30분 이하 10분당 1,000원, 30분 초과 ~ 60분 이하 10분당 2,000원
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>금요일</th>
+                            <td>
+                              1일 최대 주차요금: 20,000원<br />
+                              기본요금: 최초 30분 1,000원<br />
+                              추가요금: 00분 초과 ~30분 이하 10분당 1,000원, 30분 초과 ~ 60분 이하 10분당 2,000원
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- //Case : 요일별 누진 요금 -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

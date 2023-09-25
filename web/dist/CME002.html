@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-car-detail">차량 상품 상세정보</a>
+
+    <!-- layer: 차량 상품 상세정보 -->
+    <div class="layer-wrap layer-car-detail" data-layer="layer-car-detail">
+      <div class="layer-container">
+        <section class="ui-layer">
+          <div class="ui-layer__head">
+            <h2 class="page-title">
+              <span class="page-title__text">차량 상품 상세정보</span>
+            </h2>
+          </div>
+          <div class="ui-layer__body ui-scroller">
+            <div class="ui-layer__body-inner">
+              <section class="info-detail-section info-detail-section--no-dot">
+                <div class="info-detail-section__head">
+                  <h5 class="info-detail-section__title">차량 적용 정보</h5>
+                </div>
+                <div class="view-table">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>차량번호</th>
+                        <td>12가 1234</td>
+                      </tr>
+                      <tr>
+                        <th>적용 시작</th>
+                        <td>2021.03.01 00:00</td>
+                      </tr>
+                      <tr>
+                        <th>적용 종료</th>
+                        <td>2021.03.31 23.59</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section class="info-detail-section info-detail-section--no-dot">
+                <div class="info-detail-section__head">
+                  <h5 class="info-detail-section__title">상품 정보</h5>
+                </div>
+                <div class="view-table">
+                  <table>
+                    <tbody>
+                      <!-- 2021.05.28 : mod : 상품유형 항목 한개로 변경 -->
+                      <tr>
+                        <th>상품유형</th>
+                        <td>기간정기권</td>
+                      </tr>
+                      <!-- //2021.05.28 : mod : 상품유형 항목 한개로 변경 -->
+                      <tr>
+                        <th>상품명</th>
+                        <td>Product Name</td>
+                      </tr>
+                      <tr>
+                        <th>사용가능 옵션</th>
+                        <td>
+                          기간 (2020.02.01~2020.02.28)<br />
+                          월,화,수,목,금
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="ui-layer__foot">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button" data-role="layerClose">확인</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 차량 상품 상세정보 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-car-detail');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <g transform="translate(-38 -188)">
+        <rect width="34" height="34" fill="none" rx="5" transform="translate(38 188)"/>
+        <g>
+            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5px" d="M721.563 488.935a1.075 1.075 0 0 0-1.021-1.122h-1.963l-1.331-2.522a3.616 3.616 0 0 0-3.273-2.268h-9.228a3.616 3.616 0 0 0-3.273 2.268l-1.331 2.522H698.4a1.075 1.075 0 0 0-1.021 1.122 1.105 1.105 0 0 0 .785 1.091l.684.244-.4.757a9.826 9.826 0 0 0-.8 3.907v6.646a1.27 1.27 0 0 0 1.207 1.326h2.461a1.27 1.27 0 0 0 1.207-1.326v-1.116h13.688v1.116a1.27 1.27 0 0 0 1.206 1.326h2.461a1.27 1.27 0 0 0 1.207-1.326v-6.646a9.824 9.824 0 0 0-.8-3.907l-.365-.691.868-.31a1.105 1.105 0 0 0 .775-1.091z" transform="translate(-654.379 -289.022)"/>
+        </g>
+        <text fill="#fff" stroke="#fff" stroke-width="0.2px" font-family="NanumSquareOTFEB, NanumSquareOTF" font-size="7px" transform="translate(49.5 205.5)">
+            <tspan x="0" y="0">VIP</tspan>
+        </text>
+        <g>
+            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5px" d="M0 0L10 0" transform="translate(1.5 1.736) translate(48.5 215.264)"/>
+        </g>
+    </g>
+</svg>

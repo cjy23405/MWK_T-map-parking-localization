@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="layout-wrap">
+        <div class="header-wrap ui-scroller">
+          <header class="header">
+            <div class="header__head">
+              <h1 class="header__logo">
+                <a href="" class="header__logo-link">
+                  <span class="for-a11y">T-map 주차</span>
+                </a>
+              </h1>
+            </div>
+            <div class="header__body">
+              <nav class="gnb">
+                <h2 class="for-a11y">글로벌 내비게이션</h2>
+                <ul class="gnb__list">
+                  <li class="gnb__item gnb__item--parking-lot-info">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">주차장 정보</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--in-and-out-log">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">입출차 정보</span>
+                    </a>
+                  </li>
+                  <!-- DD : 해당 페이지면 is-active 클래스 값 추가 -->
+                  <li class="gnb__item gnb__item--subscribe-log is-active">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">차량 상품 정보</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--calculate-log">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">차량 정산 내역</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--vip-info">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">VIP존 정보</span>
+                    </a>
+                  </li>
+                  <!-- 2021.05.04 : add : 메뉴 추가 -->
+                  <li class="gnb__item gnb__item--blacklist">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">블랙 리스트</span>
+                    </a>
+                  </li>
+                  <!-- //2021.05.04 : add : 메뉴 추가 -->
+                  <li class="gnb__item gnb__item--gateway-version">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">게이트웨이 버전</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__foot">
+              <div class="header__etc-nav">
+                <ul class="header__etc-nav__list">
+                  <li class="header__etc-nav__item">
+                    <a href="" class="header__etc-nav__link">비밀번호 변경</a>
+                  </li>
+                  <li class="header__etc-nav__item">
+                    <a href="" class="header__etc-nav__link">로그아웃</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="contents-wrap">
+          <section class="contents">
+            <div class="page-head">
+              <h2 class="page-head__title">
+                <span class="page-head__title-text">주차장 정보</span>
+                <span class="page-head__title-arrow">
+                  <span class="for-a11y">&gt;</span>
+                </span>
+                <strong class="page-head__title-text">상품 정보</strong>
+              </h2>
+            </div>
+
+            <div class="primary-tab">
+              <ul class="primary-tab__list">
+                <li class="primary-tab__item">
+                  <a href="" class="primary-tab__link">
+                    <span class="primary-tab__text">기본 정보</span>
+                  </a>
+                </li>
+                <li class="primary-tab__item">
+                  <a href="" class="primary-tab__link">
+                    <span class="primary-tab__text">과금 정책</span>
+                  </a>
+                </li>
+                <li class="primary-tab__item is-active">
+                  <a href="" class="primary-tab__link">
+                    <span class="primary-tab__text">상품 정보</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contents-head contents-head--info">
+              <h3 class="page-title">
+                <span class="page-title__text">TP00000180 센트로 폴리스</span>
+              </h3>
+              <div class="contents-head__right">
+                <div class="form-flex">
+                  <div class="form-flex__cell">
+                    <div class="ui-input-block">
+                      <div class="ui-input">수신일자: 2021-02-17 13:00</div>
+                    </div>
+                  </div>
+                  <div class="form-flex__cell">
+                    <a href="" class="ui-basic-button">이력</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-accordion js-ui-accordion">
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">기간정기권</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <section class="info-detail-section">
+                      <div class="info-detail-section__head">
+                        <h5 class="info-detail-section__title">상품명: 기간정기권01</h5>
+                      </div>
+                      <div class="view-table view-table--info-detail">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>판매구분</th>
+                              <td>개인</td>
+                            </tr>
+                            <tr>
+                              <th>한도매수</th>
+                              <td>10매</td>
+                            </tr>
+                            <tr>
+                              <th>사용가능 옵션</th>
+                              <td>30일, 00시~19시 월,화,수,목,금</td>
+                            </tr>
+                            <tr>
+                              <th>정책 적용시점</th>
+                              <td>2021.03.09 ~ 9999.12.31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                    <section class="info-detail-section">
+                      <div class="info-detail-section__head">
+                        <h5 class="info-detail-section__title">상품명: 기간정기권02</h5>
+                      </div>
+                      <div class="view-table view-table--info-detail">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>판매구분</th>
+                              <td>개인</td>
+                            </tr>
+                            <tr>
+                              <th>한도매수</th>
+                              <td>10매</td>
+                            </tr>
+                            <tr>
+                              <th>사용가능 옵션</th>
+                              <td>30일, 00시~19시 월,화,수,목,금</td>
+                            </tr>
+                            <tr>
+                              <th>정책 적용시점</th>
+                              <td>2021.03.09 ~ 9999.12.31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">시간 정기권</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <section class="info-detail-section">
+                      <div class="info-detail-section__head">
+                        <h5 class="info-detail-section__title">상품명: 시간정기권01</h5>
+                      </div>
+                      <div class="view-table view-table--info-detail">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>유효기간</th>
+                              <td>30일</td>
+                            </tr>
+                            <tr>
+                              <th>시간</th>
+                              <td>180분</td>
+                            </tr>
+                            <tr>
+                              <th>사용가능 옵션</th>
+                              <td>00시~19시 월,화,수,목,금</td>
+                            </tr>
+                            <tr>
+                              <th>적용시점</th>
+                              <td>2021.03.09 ~ 9999.12.31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">시간권</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <section class="info-detail-section">
+                      <div class="info-detail-section__head">
+                        <h5 class="info-detail-section__title">상품명: 시간권01</h5>
+                      </div>
+                      <div class="view-table view-table--info-detail">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>유효기간</th>
+                              <td>7일</td>
+                            </tr>
+                            <tr>
+                              <th>시간</th>
+                              <td>30분</td>
+                            </tr>
+                            <tr>
+                              <th>사용가능 옵션</th>
+                              <td>00시~19시 월,화,수,목,금</td>
+                            </tr>
+                            <tr>
+                              <th>적용시점</th>
+                              <td>2021.03.09 ~ 9999.12.31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">입주사 무료 할인권</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <section class="info-detail-section">
+                      <div class="info-detail-section__head">
+                        <h5 class="info-detail-section__title">상품명: 입주사무료할인권01</h5>
+                      </div>
+                      <div class="view-table view-table--info-detail">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>시간</th>
+                              <td>30일</td>
+                            </tr>
+                            <tr>
+                              <th>적용제한</th>
+                              <td>100매</td>
+                            </tr>
+                            <tr>
+                              <th>유효기간</th>
+                              <td>30일</td>
+                            </tr>
+                            <tr>
+                              <th>정책 적용시점</th>
+                              <td>2021.03.09 ~ 9999.12.31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+
+              <section class="info-accordion__item js-ui-accordion__item">
+                <div class="info-accordion__head">
+                  <h4 class="info-accordion__title">입주사 유료 할인권</h4>
+                  <button type="button" class="ui-button info-accordion__opener js-ui-accordion__opener">
+                    <span class="for-a11y">
+                      상세 내용
+                      <span class="open-text">열기</span>
+                      <span class="close-text">닫기</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="info-accordion__layer js-ui-accordion__layer">
+                  <div class="info-accordion__contents">
+                    <section class="info-detail-section">
+                      <div class="info-detail-section__head">
+                        <h5 class="info-detail-section__title">상품명: 입주사 유료 할인권01</h5>
+                      </div>
+                      <div class="view-table view-table--info-detail">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <th>시간</th>
+                              <td>30분</td>
+                            </tr>
+                            <tr>
+                              <th>판매제한</th>
+                              <td>총 판매제한 100매</td>
+                            </tr>
+                            <tr>
+                              <th>적용제한</th>
+                              <td>100매</td>
+                            </tr>
+                            <tr>
+                              <th>유효기간</th>
+                              <td>30일</td>
+                            </tr>
+                            <tr>
+                              <th>적용시점</th>
+                              <td>2021.03.09 ~ 9999.12.31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

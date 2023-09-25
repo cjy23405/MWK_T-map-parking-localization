@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-charging-policy-log">과금 정책 이력조회</a>
+
+    <!-- layer: 과금 정책 이력조회 -->
+    <div class="layer-wrap layer-log" data-layer="layer-charging-policy-log">
+      <div class="layer-container">
+        <section class="ui-layer">
+          <div class="ui-layer__head">
+            <h2 class="page-title">
+              <span class="page-title__text">과금 정책 이력조회</span>
+            </h2>
+          </div>
+          <div class="ui-layer__body ui-scroller">
+            <div class="ui-layer__body-inner">
+              <div class="list-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="align-center">
+                        <div class="list-table__head-text">전송일시</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-center">2021.03.01 13:00</td>
+                    </tr>
+                    <tr>
+                      <td class="align-center">2021.03.01 13:00</td>
+                    </tr>
+                    <tr>
+                      <td class="align-center">2021.03.01 13:00</td>
+                    </tr>
+                    <tr>
+                      <td class="align-center">2021.03.01 13:00</td>
+                    </tr>
+                    <tr>
+                      <td class="align-center">2021.03.01 13:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="list-foot">
+                <!-- Case : 첫 페이지 일 때 -->
+                <nav class="pagenation">
+                  <h4 class="for-a11y">Pagenation</h4>
+                  <div class="pagenation__inner">
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start" disabled><span class="for-a11y">처음</span></button>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev" disabled><span class="for-a11y">이전</span></button>
+                    <a href="" class="pagenation__link is-active">1</a>
+                    <a href="" class="pagenation__link">2</a>
+                    <a href="" class="pagenation__link">3</a>
+                    <a href="" class="pagenation__link">4</a>
+                    <a href="" class="pagenation__link">5</a>
+                    <a href="" class="pagenation__link">6</a>
+                    <a href="" class="pagenation__link">7</a>
+                    <a href="" class="pagenation__link">8</a>
+                    <a href="" class="pagenation__link">9</a>
+                    <a href="" class="pagenation__link">10</a>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next"><span class="for-a11y">다음</span></button>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end"><span class="for-a11y">끝</span></button>
+                  </div>
+                </nav>
+                <!-- //Case : 첫 페이지 일 때 -->
+
+                <!-- Case : 첫 페이지도, 마지막 페이지도 아닐 때 -->
+                <nav class="pagenation">
+                  <h3 class="for-a11y">Pagenation</h3>
+                  <div class="pagenation__inner">
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start"><span class="for-a11y">처음</span></button>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev"><span class="for-a11y">이전</span></button>
+                    <a href="" class="pagenation__link">1</a>
+                    <a href="" class="pagenation__link">2</a>
+                    <a href="" class="pagenation__link">3</a>
+                    <a href="" class="pagenation__link">4</a>
+                    <a href="" class="pagenation__link">5</a>
+                    <a href="" class="pagenation__link is-active">6</a>
+                    <a href="" class="pagenation__link">7</a>
+                    <a href="" class="pagenation__link">8</a>
+                    <a href="" class="pagenation__link">9</a>
+                    <a href="" class="pagenation__link">10</a>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next"><span class="for-a11y">다음</span></button>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end"><span class="for-a11y">끝</span></button>
+                  </div>
+                </nav>
+                <!-- //Case : 첫 페이지도, 마지막 페이지도 아닐 때 -->
+
+                <!-- Case : 마지막 페이지 일 때 -->
+                <nav class="pagenation">
+                  <h3 class="for-a11y">Pagenation</h3>
+                  <div class="pagenation__inner">
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start"><span class="for-a11y">처음</span></button>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev"><span class="for-a11y">이전</span></button>
+                    <a href="" class="pagenation__link">1</a>
+                    <a href="" class="pagenation__link">2</a>
+                    <a href="" class="pagenation__link">3</a>
+                    <a href="" class="pagenation__link">4</a>
+                    <a href="" class="pagenation__link">5</a>
+                    <a href="" class="pagenation__link">6</a>
+                    <a href="" class="pagenation__link">7</a>
+                    <a href="" class="pagenation__link">8</a>
+                    <a href="" class="pagenation__link">9</a>
+                    <a href="" class="pagenation__link is-active">10</a>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next" disabled><span class="for-a11y">다음</span></button>
+                    <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end" disabled><span class="for-a11y">끝</span></button>
+                  </div>
+                </nav>
+                <!-- //Case : 마지막 페이지 일 때 -->
+              </div>
+            </div>
+          </div>
+          <div class="ui-layer__foot">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button" data-role="layerClose">확인</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 과금 정책 이력조회 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-charging-policy-log');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

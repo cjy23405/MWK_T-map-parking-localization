@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-3{stroke:#ff3c7a;stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="ic_calendar" transform="translate(-411 -167)">
+        <path id="사각형_135" d="M0 0H20V20H0z" class="cls-1" transform="translate(411 167)"/>
+        <g id="ic_schedule" transform="translate(-12.555 -11.75)">
+            <g id="사각형_55" fill="none" stroke="#ff3c7a" transform="translate(426.555 182)">
+                <rect width="14" height="13" stroke="none" rx="2"/>
+                <rect width="13" height="12" x=".5" y=".5" class="cls-1" rx="1.5"/>
+            </g>
+            <path id="선_2" d="M0 0L0 3" class="cls-3" transform="translate(430.731 181.25)"/>
+            <path id="선_4" d="M12 0L0 0" class="cls-3" transform="translate(427.453 186.75)"/>
+            <path id="선_3" d="M0 0L0 3" class="cls-3" transform="translate(436.379 181.25)"/>
+            <path id="패스_6" fill="none" stroke="#ff3c7a" stroke-linecap="round" stroke-linejoin="round" d="M605.279 183.658l1.381 1.268 2.6-2.391" transform="translate(-173.818 6.653)"/>
+        </g>
+    </g>
+</svg>

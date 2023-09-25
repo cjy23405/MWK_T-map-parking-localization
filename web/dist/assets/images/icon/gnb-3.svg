@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+    <defs>
+        <style>
+            .cls-3{fill:#fff}
+        </style>
+    </defs>
+    <g id="ic_차량상품정보_n" transform="translate(-1326 -5943)">
+        <rect id="사각형_4" width="34" height="34" fill="none" rx="5" transform="translate(1326 5943)"/>
+        <path id="합치기_2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5px" d="M-5308.588-615.374H-5320a1.25 1.25 0 0 1-1.25-1.25V-631a1.25 1.25 0 0 1 1.25-1.25h18a1.25 1.25 0 0 1 1.25 1.25v14.376a1.25 1.25 0 0 1-1.25 1.25h-2.711l1.25 3.92z" transform="translate(6654 6584)"/>
+        <circle id="타원_23" cx="1.367" cy="1.367" r="1.367" class="cls-3" transform="translate(1341.634 5954.874)"/>
+        <rect id="사각형_98" width="2.734" height="6.835" class="cls-3" rx="1.367" transform="translate(1341.634 5958.291)"/>
+    </g>
+</svg>

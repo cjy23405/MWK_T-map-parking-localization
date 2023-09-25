@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="btn_pre_more_d" width="13.046" height="24" viewBox="0 0 13.046 24">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#b2b6c2;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <path id="사각형_133" fill="none" d="M0 0H12V24H0z"/>
+    <path id="패스_27" d="M614.017 706.836v4h4" class="cls-2" transform="rotate(45 1153.95 -372.212)"/>
+    <path id="패스_28" d="M614.017 706.836v4h4" class="cls-2" transform="rotate(45 1152.035 -376.834)"/>
+</svg>

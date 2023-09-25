@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-change-password">비밀번호 변경</a>
+
+    <!-- layer: 비밀번호 변경 -->
+    <div class="layer-wrap" data-layer="layer-change-password">
+      <div class="layer-container">
+        <section class="login">
+          <h1 class="login__logo">
+            <span class="for-a11y">T-map 주차</span>
+          </h1>
+          <p class="login__top-text login__top-text--message">비밀번호 변경</p>
+          <form action="">
+            <div class="login__row">
+              <dl class="login-form-item">
+                <dt class="login-form-item__key">새 비밀번호</dt>
+                <dd class="login-form-item__val">
+                  <div class="ui-input-block ui-input-block--login-password">
+                    <input type="password" class="ui-input" title="비밀번호" placeholder="비밀번호" />
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="login__row">
+              <dl class="login-form-item">
+                <dt class="login-form-item__key">새 비밀번호 확인</dt>
+                <dd class="login-form-item__val">
+                  <div class="ui-input-block ui-input-block--login-password-check">
+                    <input type="password" class="ui-input" title="비밀번호 확인" placeholder="비밀번호 확인" />
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="login__buttons">
+              <button type="reset" class="ui-button ui-basic-button ui-basic-button--tertiary ui-basic-button--login" data-role="layerClose">취소</button>
+              <button type="submit" class="ui-button ui-basic-button ui-basic-button--login">비밀번호 변경</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 비밀번호 변경 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      // 퍼블리셔 테스트 소스 입니다. 운영엔 반영하지 말아주세요.
+      $(function () {
+        uiJSLayer.open('layer-change-password');
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

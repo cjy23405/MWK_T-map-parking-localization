@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+      .is-emphasis {
+        font-weight: 700;
+        color: #ff4040;
+      }
+      .index-wrap {
+        box-sizing: border-box;
+        min-width: 1900px;
+        padding: 20px;
+      }
+      .index-title {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 20px;
+      }
+      .index-links:before {
+        content: '';
+        display: table;
+      }
+      .index-links__inner {
+        margin: -10px 0 0 -10px;
+      }
+      .index-links__inner:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .index-links a {
+        display: block;
+        margin: 10px 0 0 10px;
+        float: left;
+        padding: 5px 15px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        background: #666;
+      }
+      .index-gnb {
+        margin: 20px 0;
+      }
+      .index-bottom {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-width: 1900px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .index-bottom a {
+        background-color: #066cb3;
+      }
+      .index-section + .index-section {
+        margin-top: 20px;
+      }
+      .index-section__title {
+        margin: 0;
+        padding: 5px 15px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+        background: #333;
+      }
+      .index-table > table {
+        width: 100%;
+        table-layout: fixed;
+        margin: 0;
+        padding: 0;
+        border-spacing: 0;
+        box-sizing: border-box;
+      }
+      .index-table > table > thead > tr > th,
+      .index-table > table > tbody > tr > th,
+      .index-table > table > tbody > tr > td {
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: left;
+        padding: 5px 15px;
+        border: 0 solid #cdcdcd;
+        border-width: 0 1px 1px 0;
+        background: #fff;
+        word-break: keep-all;
+        word-wrap: break-word;
+      }
+      .index-table > table > tbody > tr:hover > th,
+      .index-table > table > tbody > tr:hover > td {
+        background-color: #f6f6f6;
+      }
+      .index-table > table > thead > tr > th:first-child,
+      .index-table > table > tbody > tr > th:first-child,
+      .index-table > table > tbody > tr > td:first-child {
+        border-left-width: 1px;
+      }
+      .index-table > table > thead > tr > th {
+        border-top-width: 1px;
+      }
+      .index-table > table > thead > tr > th,
+      .index-table > table > tbody > tr > th {
+        background-color: #e8e8e8;
+      }
+      .index-table > table > tbody > tr:last-child > td:first-child {
+        border-radius: 0 0 0 5px;
+      }
+      .index-table > table > tbody > tr:last-child > td:last-child {
+        border-radius: 0 0 5px 0;
+      }
+      .index-status {
+        display: inline-block;
+        vertical-align: top;
+        padding: 3px 8px;
+        margin: -3px 0;
+        background: #999;
+        color: #fff;
+        border-radius: 5px;
+      }
+      .index-status--ing {
+        background-color: #ffb01a;
+      }
+      .index-status--end {
+        background-color: #00a6a0;
+      }
+      .index-status--moding {
+        background-color: #ff4594;
+      }
+      .index-log {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .index-log__item {
+        position: relative;
+        padding-left: 80px;
+      }
+      .index-log__item__date {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .index-text {
+        margin-bottom: 20px;
+      }
+      .index-type {
+        color: #2b5cd9;
+      }
+    </style>
+    <!-- //style -->
+  </head>
+  <body>
+    <div class="index-wrap">
+      <h1 class="index-title"></h1>
+      <div class="index-gnb">
+        <div class="index-links">
+          <div class="index-links__inner">
+            <a href="./guide-popup.html" target="_blank">레이어 팝업 가이드</a>
+            <a href="./guide-component.html" target="_blank">컴포넌트 가이드</a>
+          </div>
+        </div>
+      </div>
+      <div class="index-bottom">
+        <div class="index-links">
+          <div class="index-links__inner" id="nav"></div>
+        </div>
+      </div>
+
+      <!--
+      <div class="index-text">
+        text
+      </div>
+      -->
+
+      <div class="index-datas" id="indexTable"></div>
+    </div>
+
+    <div class="index-fake-botttom"></div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./dist/assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+      var title = 'T-map 주차 Localization';
+      var tableData = [
+        /*
+        {
+          depth1: '',
+          data: [
+            {
+              id: '',
+              depth2: '',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '',
+              status: '',
+              create: '',
+              update: '',
+              log: [
+                //{ date: '', text: '', },
+              ],
+            },
+          ],
+        },
+        */
+        {
+          depth1: '공통',
+          data: [
+            {
+              id: '',
+              depth2: '레이아웃',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/_layout.html',
+              status: 'end',
+              create: '2021.03.26',
+              log: [
+                { date: '2021.03.30', text: '데이트피커 관련 라이브러리 추가' },
+                { date: '2021.05.04', text: '블랙 리스트 메뉴 추가' },
+              ],
+            },
+            {
+              id: '',
+              depth2: '얼럿형 레이어 팝업',
+              depth3: 'type 1',
+              depth4: '',
+              depth5: '',
+              path: '/_alert-type-1.html',
+              status: 'end',
+              create: '2021.03.26',
+              log: [],
+            },
+            {
+              id: '',
+              depth2: '얼럿형 레이어 팝업',
+              depth3: 'type 2',
+              depth4: '',
+              depth5: '',
+              path: '/_alert-type-2.html',
+              status: 'end',
+              create: '2021.03.26',
+              log: [],
+            },
+          ],
+        },
+        {
+          depth1: '로그인',
+          data: [
+            {
+              id: 'LOG001',
+              depth2: '',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/LOG001.html',
+              status: 'end',
+              create: '2021.03.26',
+              log: [],
+            },
+            {
+              id: 'LOG002',
+              depth2: '최초 로그인 비밀번호 변경',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/LOG002.html',
+              status: 'end',
+              create: '2021.03.26',
+              log: [],
+            },
+            {
+              id: 'LOG003',
+              depth2: '비밀번호 변경 (팝업)',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/LOG003.html',
+              status: 'end',
+              create: '2021.03.26',
+              log: [],
+            },
+          ],
+        },
+        {
+          depth1: '주차장 정보',
+          data: [
+            {
+              id: 'BAS001',
+              depth2: '기본정보',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/BAS001.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [{ date: '2021.06.01', text: '화이트리스트 조치 항목 삭제' }],
+            },
+            {
+              id: 'BAS002',
+              depth2: '기본정보',
+              depth3: '이력조회 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/BAS002.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [],
+            },
+            {
+              id: 'CHR001',
+              depth2: '과금 정책',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/CHR001.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [],
+            },
+            {
+              id: 'CHR002',
+              depth2: '과금 정책',
+              depth3: '이력조회 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/CHR002.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [],
+            },
+            {
+              id: 'MER001',
+              depth2: '상품 정보',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/MER001.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [],
+            },
+            {
+              id: 'MER002',
+              depth2: '상품 정보',
+              depth3: '이력조회 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/MER002.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [],
+            },
+          ],
+        },
+        {
+          depth1: '입출차 정보',
+          data: [
+            {
+              id: 'INOUT001',
+              depth2: '목록',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/INOUT001.html',
+              status: 'end',
+              create: '2021.03.30',
+              log: [
+                { date: '2021.04.06', text: '셀 너비 값 변경' },
+                { date: '2021.05.28', text: '조회 항목 구성 변경' },
+                { date: '2021.06.01', text: '테이블 컬럼 추가' },
+              ],
+            },
+            {
+              id: 'INOUT001',
+              depth2: '목록',
+              depth3: '조회 내용 없음',
+              depth4: '',
+              depth5: '',
+              path: '/INOUT001--empty.html',
+              status: 'end',
+              create: '2021.03.30',
+              log: [
+                { date: '2021.04.06', text: '셀 너비 값 변경' },
+                { date: '2021.05.28', text: '조회 항목 구성 변경' },
+                { date: '2021.06.01', text: '테이블 컬럼 추가' },
+              ],
+            },
+            {
+              id: 'INOUT003',
+              depth2: '목록',
+              depth3: '부가정보 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/INOUT003.html',
+              status: 'end',
+              create: '2021.03.30',
+              log: [{ date: '2021.05.04', text: '항목 추가' }],
+            },
+          ],
+        },
+        {
+          depth1: '차량 상품 정보',
+          data: [
+            {
+              id: 'CME001',
+              depth2: '목록',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/CME001.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [{ date: '2021.05.28', text: '조회 항목 구성 변경 및 테이블 컬럼 구성 변경' }],
+            },
+            {
+              id: 'CME001',
+              depth2: '목록',
+              depth3: '조회 내용 없음',
+              depth4: '',
+              depth5: '',
+              path: '/CME001--empty.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [{ date: '2021.05.28', text: '조회 항목 구성 변경 및 테이블 컬럼 구성 변경' }],
+            },
+            {
+              id: 'CME002',
+              depth2: '목록',
+              depth3: '상세 정보 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/CME002.html',
+              status: 'end',
+              create: '2021.04.06',
+              log: [{ date: '2021.05.28', text: '상품유형 항목 한개로 변경' }],
+            },
+          ],
+        },
+        {
+          depth1: '차량 정산 내역',
+          data: [
+            {
+              id: 'BAL001',
+              depth2: '목록',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/BAL001.html',
+              status: 'end',
+              create: '2021.04.09',
+              log: [],
+            },
+            {
+              id: 'BAL001',
+              depth2: '목록',
+              depth3: '조회 내용 없음',
+              depth4: '',
+              depth5: '',
+              path: '/BAL001--empty.html',
+              status: 'end',
+              create: '2021.04.09',
+              log: [],
+            },
+            {
+              id: 'BAL002',
+              depth2: '목록',
+              depth3: '상세 정보 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/BAL002.html',
+              status: 'end',
+              create: '2021.04.09',
+              log: [],
+            },
+          ],
+        },
+        {
+          depth1: 'VIP존 정보',
+          data: [
+            {
+              id: 'VIP001',
+              depth2: '출입차량 조회',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/VIP001.html',
+              status: 'end',
+              create: '2021.04.14',
+              log: [],
+            },
+            {
+              id: 'VIP001',
+              depth2: '출입차량 조회',
+              depth3: '조회 내용 없음',
+              depth4: '',
+              depth5: '',
+              path: '/VIP001--empty.html',
+              status: 'end',
+              create: '2021.04.14',
+              log: [],
+            },
+            {
+              id: 'VIP003',
+              depth2: '입출차 현황',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/VIP003.html',
+              status: 'end',
+              create: '2021.04.14',
+              log: [],
+            },
+            {
+              id: 'VIP003',
+              depth2: '입출차 현황',
+              depth3: '조회 내용 없음',
+              depth4: '',
+              depth5: '',
+              path: '/VIP003--empty.html',
+              status: 'end',
+              create: '2021.04.14',
+              log: [],
+            },
+            {
+              id: 'VIP004',
+              depth2: '미등록',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/VIP004.html',
+              status: 'end',
+              create: '2021.04.14',
+              log: [],
+            },
+          ],
+        },
+        {
+          depth1: '블랙 리스트',
+          data: [
+            {
+              id: 'BLL001',
+              depth2: '목록',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/BLL001.html',
+              status: 'end',
+              create: '2021.05.04',
+              log: [],
+            },
+            {
+              id: 'BLL001',
+              depth2: '목록',
+              depth3: '조회 내용 없음',
+              depth4: '',
+              depth5: '',
+              path: '/BLL001--empty.html',
+              status: 'end',
+              create: '2021.05.04',
+              log: [],
+            },
+            {
+              id: 'BLL002',
+              depth2: '목록',
+              depth3: '상세 정보 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/BLL002.html',
+              status: 'end',
+              create: '2021.05.04',
+              log: [],
+            },
+          ],
+        },
+        {
+          depth1: '게이트웨이 버전',
+          data: [
+            {
+              id: 'GAW001',
+              depth2: '목록',
+              depth3: '',
+              depth4: '',
+              depth5: '',
+              path: '/GAW001.html',
+              status: 'end',
+              create: '2021.04.12',
+              log: [],
+            },
+            {
+              id: 'GAW002',
+              depth2: '목록',
+              depth3: '이력 조회 (팝업)',
+              depth4: '',
+              depth5: '',
+              path: '/GAW002.html',
+              status: 'end',
+              create: '2021.04.12',
+              log: [],
+            },
+          ],
+        },
+      ];
+
+      var html = '';
+      var navHTML = '';
+      var totalIndex = 0;
+      var dates = (function () {
+        var array = [];
+
+        function add(date) {
+          if (typeof date === 'string' && date.length && array.indexOf(date) === -1) {
+            array.push(date);
+          }
+        }
+
+        $.each(tableData, function (i) {
+          var sectionData = tableData[i].data;
+          $.each(sectionData, function (j) {
+            add(this.create);
+            $.each(sectionData[j].log, function (l) {
+              add(this.date);
+            });
+          });
+        });
+
+        array.sort();
+
+        return array;
+      })();
+      var latestDate = dates[dates.length - 1];
+
+      $.each(tableData, function (i) {
+        var sectionIndex = i;
+        var sectionData = tableData[i].data;
+        var tableHTML = '';
+
+        $.each(sectionData, function (j) {
+          var returnVal = function (key) {
+            var val = sectionData[j][key];
+            var prevIndex = j - 1;
+            var isPrint = true;
+            if (prevIndex >= 0) {
+              if (sectionData[prevIndex][key] === val) {
+                isPrint = false;
+              }
+            }
+            return isPrint ? val.replace(/\n/g, '<br>') : '';
+          };
+          var id = returnVal('id');
+          var depth2 = returnVal('depth2');
+          var depth3 = returnVal('depth3');
+          var depth4 = returnVal('depth4');
+          var depth5 = returnVal('depth5');
+          var path = (function () {
+            var val = sectionData[j].path;
+            var href = '';
+            if (val.match(/^\.\//g)) {
+              href = val;
+            } else {
+              href = './dist' + val;
+            }
+            return val.length ? '<a href="' + href + '" target="_blank">' + val + '</a>' : '';
+          })();
+          var status = (function () {
+            var val = sectionData[j].status;
+            var text = '';
+            if (val === 'ing') {
+              text = '작업중';
+            } else if (val === 'end') {
+              text = '작업완료';
+            } else if (val === 'moding') {
+              text = '수정중';
+            }
+            return val.length ? '<span class="index-status index-status--' + val + '">' + text + '</span>' : '';
+          })();
+          var create = this.create;
+          var update = '';
+          var log = (function () {
+            var val = sectionData[j].log;
+            var length = val.length;
+            var html = '<ul class="index-log">';
+            $.each(val, function (l) {
+              var date = this.date;
+              html +=
+                '<li class="index-log__item' + (date === latestDate ? ' is-emphasis' : '') + '"><div class="index-log__item__date">[' + date + ']</div>' + this.text.replace(/\n/g, '<br>') + '</li>';
+              if (length - 1 === l) {
+                update = date;
+              }
+            });
+            html += '</ul>';
+
+            return html;
+          })();
+
+          tableHTML +=
+            '<tr>' +
+            '<td>' +
+            (j + 1) +
+            '</td>' +
+            '<td>' +
+            id +
+            '</td>' +
+            '<td>' +
+            depth2 +
+            '</td>' +
+            '<td>' +
+            depth3 +
+            '</td>' +
+            '<td>' +
+            depth4 +
+            '</td>' +
+            '<td>' +
+            depth5 +
+            '</td>' +
+            '<td>' +
+            path +
+            '</td>' +
+            '<td>' +
+            status +
+            '</td>' +
+            '<td class="' +
+            (create === latestDate ? ' is-emphasis' : '') +
+            '">' +
+            create +
+            '</td>' +
+            '<td class="' +
+            (update === latestDate ? ' is-emphasis' : '') +
+            '">' +
+            update +
+            '</td>' +
+            '<td>' +
+            log +
+            '</td>' +
+            '</tr>';
+
+          totalIndex++;
+        });
+
+        navHTML += '<a href="#section' + i + '">' + tableData[i].depth1 + '</a>';
+
+        html +=
+          '<div class="index-section" id="section' +
+          i +
+          '">' +
+          '<h2 class="index-section__title">' +
+          tableData[i].depth1 +
+          '</h2>' +
+          '<div class="index-table">' +
+          '<table>' +
+          '<colgroup>' +
+          '<col width="50px" />' +
+          '<col width="160px" />' +
+          '<col width="160px" />' +
+          '<col width="160px" />' +
+          '<col width="160px" />' +
+          '<col width="160px" />' +
+          '<col width="" />' +
+          '<col width="100px" />' +
+          '<col width="110px" />' +
+          '<col width="110px" />' +
+          '<col width="300px" />' +
+          '</colgroup>' +
+          '<thead>' +
+          '<tr>' +
+          '<th>No</th>' +
+          '<th>ID</th>' +
+          '<th>depth2</th>' +
+          '<th>depth3</th>' +
+          '<th>depth4</th>' +
+          '<th>depth5</th>' +
+          '<th>path</th>' +
+          '<th>status</th>' +
+          '<th>create</th>' +
+          '<th>update</th>' +
+          '<th>log</th>' +
+          '</tr>' +
+          '</thead>' +
+          '<tbody>' +
+          tableHTML +
+          '</tbody>' +
+          '</table>' +
+          '</div>' +
+          '</div>';
+      });
+
+      $('title, .index-title').text(title);
+      $('#nav').append(navHTML);
+      $('#indexTable').append(html);
+
+      var $nav = $('.index-bottom');
+      var $win = $(window);
+
+      function paddingBottom() {
+        $('.index-fake-botttom').css('height', $nav.outerHeight());
+      }
+
+      $win
+        .on('scroll', function () {
+          var scrollLeft = $win.scrollLeft();
+          $nav.css('margin-left', -scrollLeft);
+        })
+        .on('resize', function () {
+          paddingBottom();
+        })
+        .on('load', function () {
+          paddingBottom();
+        });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

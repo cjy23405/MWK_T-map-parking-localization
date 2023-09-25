@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="128.064" viewBox="0 0 106 128.064">
+    <defs>
+        <clipPath id="clip-path">
+            <circle id="타원_32" cx="53" cy="53" r="53" class="cls-1" transform="translate(961 302)"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <circle id="타원_31" cx="53" cy="53" r="53" fill="#dadee2" transform="translate(860 302)"/>
+        </clipPath>
+        <style>
+            .cls-1{fill:#cccfd2}.cls-6{fill:#c0c2c4}
+        </style>
+    </defs>
+    <g id="ic_vipzoneX" transform="translate(-741 -279.936)">
+        <circle id="타원_30" cx="53" cy="53" r="53" class="cls-1" transform="translate(741 302)"/>
+        <g id="마스크_그룹_4" clip-path="url(#clip-path)" transform="translate(-220)">
+            <path id="패스_2364" fill="#b6b9bc" d="M1288.228 6204l-39.567 39.567h-61.742v-101.593h101.31z" transform="translate(-247 -5832)"/>
+        </g>
+        <g id="사각형_989" fill="#e8ebef" stroke="#dadcde" stroke-width="3px" transform="translate(759 302)">
+            <rect width="70" height="70" stroke="none" rx="10"/>
+            <rect width="67" height="67" x="1.5" y="1.5" fill="none" rx="8.5"/>
+        </g>
+        <g id="그룹_1918" transform="translate(1.995)">
+            <rect id="사각형_990" width="47.767" height="9.013" class="cls-6" rx="4.506" transform="rotate(45 6.447 1098.122)"/>
+            <rect id="사각형_991" width="47.767" height="9.013" class="cls-6" rx="4.506" transform="rotate(135 339.09 329.926)"/>
+        </g>
+        <g id="마스크_그룹_3" clip-path="url(#clip-path-2)" transform="translate(-119)">
+            <path id="패스_2362" fill="#e8ebef" d="M0 0h11v39H0z" transform="translate(908 372)"/>
+        </g>
+        <path id="패스_2365" fill="#cccfd2" d="M0 0h11v3L-.436 13.836z" opacity="0.3" transform="translate(789 372)"/>
+        <path id="패스_2366" d="M-32.992 0h2.816l3.632-11.84h-2.4l-1.536 5.76c-.368 1.344-.64 2.48-1.008 3.824h-.08c-.384-1.344-.624-2.48-.992-3.824l-1.568-5.76h-2.48zm7.808 0h2.368v-11.84h-2.368zm5.28 0h2.368v-4.208h1.584c2.544 0 4.576-1.216 4.576-3.92 0-2.816-2.032-3.712-4.64-3.712H-19.9zm2.368-6.08v-3.888h1.344c1.648 0 2.5.448 2.5 1.84 0 1.36-.8 2.048-2.416 2.048zM-6.368 0h8.48v-1.984h-5.568l5.5-8.448v-1.408H-5.84v1.968h4.992l-5.52 8.448zM8.544.224c3.136 0 5.3-2.352 5.3-6.192s-2.16-6.1-5.3-6.1-5.3 2.24-5.3 6.1c.004 3.84 2.164 6.192 5.3 6.192zm0-2.048c-1.76 0-2.88-1.632-2.88-4.144 0-2.576 1.072-4.064 2.88-4.064s2.88 1.488 2.88 4.064c0 2.512-1.124 4.144-2.88 4.144zM16.16 0h2.24v-4.752c0-1.36-.176-2.848-.288-4.128h.08l1.2 2.544L22.816 0h2.4v-11.84h-2.24v4.72c0 1.344.176 2.912.3 4.144H23.2l-1.184-2.56-3.44-6.3H16.16zm11.984 0h7.44v-1.984h-5.072v-3.168h4.16v-1.984h-4.16v-2.736h4.9v-1.968h-7.268z" class="cls-6" transform="translate(794 292)"/>
+    </g>
+</svg>

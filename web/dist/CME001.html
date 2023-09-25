@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>T-map 주차 Localization</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="layout-wrap">
+        <div class="header-wrap ui-scroller">
+          <header class="header">
+            <div class="header__head">
+              <h1 class="header__logo">
+                <a href="" class="header__logo-link">
+                  <span class="for-a11y">T-map 주차</span>
+                </a>
+              </h1>
+            </div>
+            <div class="header__body">
+              <nav class="gnb">
+                <h2 class="for-a11y">글로벌 내비게이션</h2>
+                <ul class="gnb__list">
+                  <li class="gnb__item gnb__item--parking-lot-info">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">주차장 정보</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--in-and-out-log">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">입출차 정보</span>
+                    </a>
+                  </li>
+                  <!-- DD : 해당 페이지면 is-active 클래스 값 추가 -->
+                  <li class="gnb__item gnb__item--subscribe-log is-active">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">차량 상품 정보</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--calculate-log">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">차량 정산 내역</span>
+                    </a>
+                  </li>
+                  <li class="gnb__item gnb__item--vip-info">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">VIP존 정보</span>
+                    </a>
+                  </li>
+                  <!-- 2021.05.04 : add : 메뉴 추가 -->
+                  <li class="gnb__item gnb__item--blacklist">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">블랙 리스트</span>
+                    </a>
+                  </li>
+                  <!-- //2021.05.04 : add : 메뉴 추가 -->
+                  <li class="gnb__item gnb__item--gateway-version">
+                    <a href="" class="gnb__link">
+                      <span class="gnb__text">게이트웨이 버전</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__foot">
+              <div class="header__etc-nav">
+                <ul class="header__etc-nav__list">
+                  <li class="header__etc-nav__item">
+                    <a href="" class="header__etc-nav__link">비밀번호 변경</a>
+                  </li>
+                  <li class="header__etc-nav__item">
+                    <a href="" class="header__etc-nav__link">로그아웃</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <div class="contents-wrap">
+          <section class="contents">
+            <div class="page-head page-head--line">
+              <h2 class="page-head__title">
+                <span class="page-head__title-text">차량 상품 정보</span>
+              </h2>
+            </div>
+
+            <div class="contents-head">
+              <h3 class="page-title">
+                <span class="page-title__text">TP00000180 SK_V1 모터스 테스트</span>
+              </h3>
+            </div>
+
+            <div class="filter-bar">
+              <form action="">
+                <fieldset class="ui-fieldset">
+                  <legend class="for-a11y">조회 설정</legend>
+
+                  <!-- 2021.05.28 : mod : 조회 항목 구성 변경 -->
+                  <div class="filter-bar__block">
+                    <div class="filter-bar__left">
+                      <dl class="filter-bar__item">
+                        <dt class="filter-bar__key">상품유형</dt>
+                        <dd class="filter-bar__val">
+                          <div class="check-list">
+                            <ul class="check-list__list">
+                              <li class="check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="filterAll" checked />
+                                  <label for="filterAll" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">전체</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="filter1" />
+                                  <label for="filter1" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">기간 정기권</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="filter2" />
+                                  <label for="filter2" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">시간 정기권</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="filter3" />
+                                  <label for="filter3" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">입주사 무료 할인권</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="filter4" />
+                                  <label for="filter4" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">입주사 유료 할인권</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="filter5" />
+                                  <label for="filter5" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">입주사 무료차량</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="filter-bar__block">
+                    <div class="filter-bar__left">
+                      <dl class="filter-bar__item">
+                        <dt class="filter-bar__key">기간조회</dt>
+                        <dd class="filter-bar__val">
+                          <div class="form-flex range-date-form js-datepicker-range">
+                            <div class="form-flex__cell">
+                              <div class="ui-select-block">
+                                <select class="ui-select" title="기간조회 기준">
+                                  <option value="">적용시작 기준</option>
+                                  <option value="">적용종료 기준</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-flex__cell">
+                              <div class="ui-input-block ui-input-block--date">
+                                <input type="text" class="ui-input js-datepicker-range__min" title="조회 기간 시작 날짜" value="2021-03-31" />
+                              </div>
+                            </div>
+                            <div class="form-flex__cell">-</div>
+                            <div class="form-flex__cell">
+                              <div class="ui-input-block ui-input-block--date">
+                                <input type="text" class="ui-input js-datepicker-range__max" title="조회 기간 끝 날짜" value="2021-03-31" />
+                              </div>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+
+                      <div class="filter-bar__item">
+                        <div class="ui-input-block filter-bar__keyword">
+                          <input type="search" class="ui-input" title="차량번호" placeholder="차량번호를 입력하세요." />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter-bar__right">
+                      <button type="submit" class="ui-button ui-basic-button">검색</button>
+                    </div>
+                  </div>
+                  <!-- //2021.05.28 : mod : 조회 항목 구성 변경 -->
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="list-table">
+              <table>
+                <colgroup>
+                  <col style="width: 19%" />
+                  <col />
+                  <!-- 2021.05.28 : mod : 너비 값 변경 -->
+                  <col style="width: 19%" />
+                  <col style="width: 19%" />
+                  <col style="width: 19%" />
+                  <!-- //2021.05.28 : mod : 너비 값 변경 -->
+                  <col style="width: 9%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="list-table__head-text">발행 ID</div>
+                    </th>
+                    <th>
+                      <div class="list-table__head-text">차량번호</div>
+                    </th>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <th>
+                      <div class="list-table__head-text">상품유형</div>
+                    </th>
+                    <th>
+                      <div class="list-table__head-text">적용 시작</div>
+                    </th>
+                    <th>
+                      <div class="list-table__head-text">적용 종료</div>
+                    </th>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <th>
+                      <div class="list-table__head-text">상세정보</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>기간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>시간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>입주사 무료 할인권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>입주사 유료 할인권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>입주사 무료차량</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>기간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>기간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>기간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>기간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MP000120</td>
+                    <td>12가1111</td>
+                    <!-- 2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>기간 정기권</td>
+                    <td>2018.10.17 13:00</td>
+                    <td>2018.10.17 13:00</td>
+                    <!-- //2021.05.28 : mod : 컬럼 구성 변경 -->
+                    <td>
+                      <button type="button" class="ui-button ui-table-button">조회</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="list-foot">
+              <!-- Case : 첫 페이지 일 때 -->
+              <nav class="pagenation">
+                <h4 class="for-a11y">Pagenation</h4>
+                <div class="pagenation__inner">
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start" disabled><span class="for-a11y">처음</span></button>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev" disabled><span class="for-a11y">이전</span></button>
+                  <a href="" class="pagenation__link is-active">1</a>
+                  <a href="" class="pagenation__link">2</a>
+                  <a href="" class="pagenation__link">3</a>
+                  <a href="" class="pagenation__link">4</a>
+                  <a href="" class="pagenation__link">5</a>
+                  <a href="" class="pagenation__link">6</a>
+                  <a href="" class="pagenation__link">7</a>
+                  <a href="" class="pagenation__link">8</a>
+                  <a href="" class="pagenation__link">9</a>
+                  <a href="" class="pagenation__link">10</a>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next"><span class="for-a11y">다음</span></button>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end"><span class="for-a11y">끝</span></button>
+                </div>
+              </nav>
+              <!-- //Case : 첫 페이지 일 때 -->
+
+              <!-- Case : 첫 페이지도, 마지막 페이지도 아닐 때 -->
+              <nav class="pagenation">
+                <h3 class="for-a11y">Pagenation</h3>
+                <div class="pagenation__inner">
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start"><span class="for-a11y">처음</span></button>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev"><span class="for-a11y">이전</span></button>
+                  <a href="" class="pagenation__link">1</a>
+                  <a href="" class="pagenation__link">2</a>
+                  <a href="" class="pagenation__link">3</a>
+                  <a href="" class="pagenation__link">4</a>
+                  <a href="" class="pagenation__link">5</a>
+                  <a href="" class="pagenation__link is-active">6</a>
+                  <a href="" class="pagenation__link">7</a>
+                  <a href="" class="pagenation__link">8</a>
+                  <a href="" class="pagenation__link">9</a>
+                  <a href="" class="pagenation__link">10</a>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next"><span class="for-a11y">다음</span></button>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end"><span class="for-a11y">끝</span></button>
+                </div>
+              </nav>
+              <!-- //Case : 첫 페이지도, 마지막 페이지도 아닐 때 -->
+
+              <!-- Case : 마지막 페이지 일 때 -->
+              <nav class="pagenation">
+                <h3 class="for-a11y">Pagenation</h3>
+                <div class="pagenation__inner">
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--start"><span class="for-a11y">처음</span></button>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--prev"><span class="for-a11y">이전</span></button>
+                  <a href="" class="pagenation__link">1</a>
+                  <a href="" class="pagenation__link">2</a>
+                  <a href="" class="pagenation__link">3</a>
+                  <a href="" class="pagenation__link">4</a>
+                  <a href="" class="pagenation__link">5</a>
+                  <a href="" class="pagenation__link">6</a>
+                  <a href="" class="pagenation__link">7</a>
+                  <a href="" class="pagenation__link">8</a>
+                  <a href="" class="pagenation__link">9</a>
+                  <a href="" class="pagenation__link is-active">10</a>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--next" disabled><span class="for-a11y">다음</span></button>
+                  <button type="button" class="ui-button pagenation__link pagenation__link--arrow pagenation__link--end" disabled><span class="for-a11y">끝</span></button>
+                </div>
+              </nav>
+              <!-- //Case : 마지막 페이지 일 때 -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/js/polyfills.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/js/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>
